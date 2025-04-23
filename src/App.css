@@ -184,6 +184,7 @@ input {
   color: white;
   font-size: 1rem;
   cursor: pointer;
+  margin-top: 20px;
   transition: opacity 0.3s ease;
 }
 
@@ -945,4 +946,154 @@ input {
   .prediction-card {
     min-width: 100%;
   }
+}
+/* Swap Input Container */
+.swap-input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #2d2d3a;
+  border-radius: 8px;
+  background-color: #1e1e2a;
+  overflow: hidden;
+}
+
+.swap-amount-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.swap-amount-input:focus {
+  outline: none;
+}
+
+.token-select-right {
+  padding: 12px 16px;
+  border: none;
+  border-left: 1px solid #2d2d3a;
+  background-color: #1e1e2a;
+  color: #ffffff;
+  font-size: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 20px;
+  padding-right: 40px;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.token-select-right:focus {
+  outline: none;
+}
+
+/* Existing styles that might need adjustment */
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.swap-arrow {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 20px;
+}
+/* ===== Animated Swap Arrow Styles ===== */
+.swap-arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  position: relative;
+}
+
+.swap-arrow-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  z-index: 2;
+
+  /* Glass morphism effect */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.swap-arrow-circle:hover {
+  transform: rotate(180deg) scale(1.1);
+  background: rgba(62, 123, 250, 0.2);
+  border-color: rgba(62, 123, 250, 0.4);
+}
+
+.swap-arrow-circle:active {
+  transform: rotate(180deg) scale(0.95);
+}
+
+.swap-arrow-icon {
+  color: #a0a8c3;
+  transition: all 0.3s ease;
+  width: 20px;
+  height: 20px;
+}
+
+.swap-arrow-circle:hover .swap-arrow-icon {
+  color: #3e7bfa;
+  filter: drop-shadow(0 0 4px rgba(62, 123, 250, 0.6));
+}
+
+/* Optional: Animated background circle */
+.swap-arrow-container::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(62, 123, 250, 0.1);
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.swap-arrow-container:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.swap-arrow-circle.pulse {
+  animation: pulse 2s infinite;
 }

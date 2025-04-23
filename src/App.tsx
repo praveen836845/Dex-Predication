@@ -222,54 +222,98 @@ export default function App() {
 
       {/* Swap Section */}
       <div ref={swapSectionRef} className="section-container">
-        <div className="content-container">
-          <div className="section-content reverse">
-            <div className="swap-description">
-              <h2>Token Swaps</h2>
-              <p>
-                Trade tokens instantly with optimal pricing and minimal slippage. 
-                Our advanced routing algorithm scans multiple DEXs to find you the best rates across the entire DeFi ecosystem.
-              </p>
-              <div className="stats-grid">
-                <div className="stat-item">
-                  <div className="stat-value">$1.2B</div>
-                  <div className="stat-label">24h Volume</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-value">0.05%</div>
-                  <div className="stat-label">Average Fee</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-value">12s</div>
-                  <div className="stat-label">Avg. Swap Time</div>
-                </div>
+  <div className="content-container">
+    <div className="section-content reverse">
+      <div className="swap-description">
+        <h2 className="gradient-text">Token Swaps</h2>
+        <p className="glow-text">
+          Trade tokens instantly with optimal pricing and minimal slippage. 
+          Our advanced routing algorithm scans multiple DEXs to find you the best rates.
+        </p>
+        <div className="stats-grid">
+          <div className="stat-item pulse-glow">
+            <div className="stat-value">$1.2B</div>
+            <div className="stat-label">24h Volume</div>
+          </div>
+          <div className="stat-item pulse-glow">
+            <div className="stat-value">0.05%</div>
+            <div className="stat-label">Average Fee</div>
+          </div>
+          <div className="stat-item pulse-glow">
+            <div className="stat-value">12s</div>
+            <div className="stat-label">Avg. Swap Time</div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="swap-card section-card neo-glass">
+        <div className="card-content">
+          <h2 className="card-title">Swap Tokens</h2>
+          <p className="card-subtitle">Get the best rates across DeFi</p>
+          
+          <div className="card-actions">
+            <div className="swap-input-container neo-inset">
+              <input type="number" placeholder="0.0" className="swap-amount-input" />
+              <div className="token-select-wrapper">
+                <select className="token-select-right">
+                  <option value="ETH">ETH</option>
+                  <option value="BTC">BTC</option>
+                  <option value="USDC">USDC</option>
+                  <option value="DAI">DAI</option>
+                </select>
+                <div className="token-icon eth-icon"></div>
               </div>
             </div>
-            <div className="swap-card section-card">
-              <div className="card-content">
-                <h2>Swap Tokens</h2>
-                <p>Trade tokens instantly with optimal pricing and minimal slippage</p>
-                <div className="card-actions">
-                  <input type="text" placeholder="From Token" />
-                  <div className="swap-arrow">↓</div>
-                  <input type="text" placeholder="To Token" />
-                  <button className="action-btn pulse">Swap Now</button>
-                </div>
-                <div className="card-stats">
-                  <div className="stat">
-                    <span className="value">0.05%</span>
-                    <span className="label">Fee</span>
-                  </div>
-                  <div className="stat">
-                    <span className="value">$1.2B</span>
-                    <span className="label">Volume 24h</span>
-                  </div>
-                </div>
+            
+            <div className="swap-arrow-container">
+              <div className="swap-arrow-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="swap-arrow-icon">
+                  <path d="M12 4V20M12 20L18 14M12 20L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
               </div>
+            </div>
+            
+            <div className="swap-input-container neo-inset">
+              <input type="number" placeholder="0.0" className="swap-amount-input" />
+              <div className="token-select-wrapper">
+                <select className="token-select-right">
+                  <option value="USDC">USDC</option>
+                  <option value="ETH">ETH</option>
+                  <option value="BTC">BTC</option>
+                  <option value="DAI">DAI</option>
+                </select>
+                <div className="token-icon usdc-icon"></div>
+              </div>
+            </div>
+            
+            <button className="action-btn gradient-pulse">
+              <span>Swap Now</span>
+              {/* <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="swap-icon">
+                <path d="M7 16L3 12M3 12L7 8M3 12H21M17 8L21 12M21 12L17 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg> */}
+            </button>
+          </div>
+          
+          <div className="rate-info">
+            <span className="rate-label">Best rate:</span>
+            <span className="rate-value">1 ETH = 1,850.42 USDC</span>
+          </div>
+          
+          <div className="card-stats">
+            <div className="stat">
+              <span className="value">0.05%</span>
+              <span className="label">Fee</span>
+            </div>
+            <div className="stat">
+              <span className="value">$1.2B</span>
+              <span className="label">Volume 24h</span>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
       {/* Prediction Section */}
       {/* Prediction Section */}
