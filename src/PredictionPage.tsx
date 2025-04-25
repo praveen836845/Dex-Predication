@@ -5,7 +5,7 @@ import './PredictionPage.css';
 
 // Mock data for the prediction markets
 const predictionData = {
-  'ETH/USDT': {
+  'BTC': {
     currentPrice: 3427.52,
     change: +2.4,
     volume: '1.2B',
@@ -13,7 +13,7 @@ const predictionData = {
     progress: 65,
     description: 'Ethereum price prediction market'
   },
-  'BTC/USDT': {
+  'FLR': {
     currentPrice: 63851.20,
     change: +1.8,
     volume: '3.8B',
@@ -21,7 +21,7 @@ const predictionData = {
     progress: 40,
     description: 'Bitcoin price prediction market'
   },
-  'SOL/USDT': {
+  'DOGE': {
     currentPrice: 142.75,
     change: -3.2,
     volume: '850M',
