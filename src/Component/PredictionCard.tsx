@@ -50,7 +50,7 @@ export default function PredictionCard({
           <span>Ends in: {timeRemaining}</span>
         </div>
         <div className="volume-display">
-          <span>24h Volume: {volume}</span>
+          <span>24h Volume: {volume} FLR</span>
         </div>
       </div>
     </div>
