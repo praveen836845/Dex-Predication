@@ -2501,7 +2501,7 @@ export default function HomePage() {
 
               <div className="prediction-cards-container">
                 <PredictionCard
-                  assetPair="BTC"
+                  asset="BTC"
                   currentPrice={prices.BTC}
                   priceChange={2.4}
                   timeRemaining={deadlines.BTC}
@@ -2510,7 +2510,7 @@ export default function HomePage() {
                 />
 
                 <PredictionCard
-                  assetPair="FLR"
+                  asset="FLR"
                   currentPrice={prices.FLR}
                   priceChange={1.8}
                   timeRemaining={deadlines.FLR}
@@ -2519,7 +2519,7 @@ export default function HomePage() {
                 />
 
                 <PredictionCard
-                  assetPair="DOGE"
+                  asset="DOGE"
                   currentPrice={prices.DOGE}
                   priceChange={-3.2}
                   timeRemaining={deadlines.DOGE}
