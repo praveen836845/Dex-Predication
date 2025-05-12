@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import './PredictionCard.css'; // Create this CSS file for card-specific styles
 
 interface PredictionCardProps {
-  assetPair: string;
+  asset: string;
   currentPrice: string;
   priceChange: number;
   timeRemaining: string;
@@ -11,7 +11,7 @@ interface PredictionCardProps {
 }
 
 export default function PredictionCard({
-  assetPair,
+  asset,
   currentPrice,
   priceChange,
   timeRemaining,
@@ -23,14 +23,14 @@ export default function PredictionCard({
   const handleCardClick = (e: React.MouseEvent) => {
     // Prevent navigation if clicking on action buttons
     if ((e.target as HTMLElement).closest('button')) return;
-    navigate(`/prediction/${encodeURIComponent(assetPair)}`);
+    navigate(`/prediction/${encodeURIComponent(asset)}`);
   };
 
   return (
     <div className="prediction-card clickable" onClick={handleCardClick}>
       <div className="card-content">
         <div className="market-header">
-          <h3>{assetPair}</h3>
+          <h3>{asset}</h3>
           <div className="market-tag live">LIVE</div>
         </div>
         <div className="price-display">
@@ -50,7 +50,7 @@ export default function PredictionCard({
           <span>Ends in: {timeRemaining}</span>
         </div>
         <div className="volume-display">
-          <span>24h Volume: {volume}</span>
+          <span>24h Volume: {volume} FLR</span>
         </div>
       </div>
     </div>
